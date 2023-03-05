@@ -188,6 +188,7 @@ body {
   height: 0;
   overflow: hidden;
   max-height: 35rem;
+  z-index: 99;
   transition: 300ms;
 }
 .header__nav.open {
@@ -316,7 +317,7 @@ body {
 .version p {
   padding: 1rem 4rem;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: clamp(1.7rem, 1vw, 1rem);
 }
 .version p a {
   color: #0066b8;
@@ -327,7 +328,8 @@ body {
   text-decoration: underline;
 }
 .version p span {
-  opacity: 0.7;
+  opacity: 0.8;
+  font-weight: normal;
 }
 
 .banner {
@@ -352,10 +354,10 @@ body {
   font-weight: 600;
   font-size: 5rem;
   line-height: 0.9;
-  margin-bottom: 1rem;
 }
-.banner__wrapper .banner__content p {
-  font-size: 1.25rem;
+.banner__wrapper .banner__content .p1 {
+  margin: 2rem 0;
+  font-size: 1.8rem;
 }
 .banner__wrapper .banner__content a {
   color: #0066b8;
@@ -363,36 +365,67 @@ body {
 .banner__wrapper .banner__content a:hover {
   text-decoration: underline;
 }
-.banner__wrapper .banner__content .back {
+.banner__wrapper .banner__content .p2 {
   background-color: #25252b;
-  padding: 0.8rem 1rem;
+  padding: 1rem 4rem;
   border-radius: 1rem;
   display: inline-block;
-  margin: 1rem 0;
+  margin: 2rem 0;
+  position: relative;
+}
+.banner__wrapper .banner__content .p2::after {
+  content: "";
+  width: 1.6rem;
+  height: 1.6rem;
+  display: block;
+  transform: rotate(45deg);
+  background: #25252b;
+  position: absolute;
+  top: -0.7rem;
+  right: 2.5rem;
+}
+.banner__wrapper .banner__content .p3 {
+  margin-bottom: 2rem;
 }
 .banner__wrapper .btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 }
 .banner__wrapper .btn button {
   color: #ffffff;
   background-color: #0066b8;
   outline: none;
   border: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 1rem 2rem;
   font-weight: 600;
   cursor: pointer;
 }
 .banner__wrapper .btn button span {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 200;
+}
+.banner__wrapper .btn .btn1 {
+  width: 30rem;
 }
 .banner__wrapper .btn .btn2 {
   margin-left: 0.3rem;
-  padding: 1.89rem 1rem;
+  height: 6.7rem;
 }
 .banner__wrapper img {
   width: 100%;
+}
+@media screen and (min-width: 970px) {
+  .banner__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .banner__wrapper .banner__content {
+    margin-top: 5rem;
+  }
+  .banner__wrapper img {
+    width: 60%;
+  }
 }/*# sourceMappingURL=main.css.map */
