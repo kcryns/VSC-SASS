@@ -100,7 +100,7 @@
             .header__nav2{
                 display: flex;
                 align-items: center;
-                gap: 15rem;
+                gap: 13rem;
                 ul{
                     display: flex;
                     li{
@@ -142,7 +142,7 @@
                 a{
                     i{
                         position: absolute;
-                        right: 8rem;
+                        right: 9rem;
                         top: 1.8rem;
                     }
                     color: $clr-light;
@@ -165,130 +165,4 @@
 
 }
 
-.version{
-    background-color: #25252b;
-    color: $clr-light;
-    p{
-        padding: 1rem 4rem;
-        text-align: center;
-        font-size: clamp(1.7rem,1vw,1rem);
-    a{
-        color: $clr-primary;
-        cursor: pointer;
-        opacity: none;
-    }
-    a:hover{
-        text-decoration: underline;
-    }
-    span{
-        opacity: .8;
-        font-weight: normal;
-    }
 
-}
-
-}
-
-.banner{
-    display: block;
-    background-color: $clr-dark;
-    &__wrapper{
-        color: $clr-light;
-        text-align: center;
-        .banner__content{
-            display: block;
-            h1{
-                font-size: 5rem;
-                line-height: .9;
-                font-weight: normal;
-                margin-bottom: 1rem;
-                margin-top: 2rem;
-
-            }
-            strong{
-                font-weight: 600;
-                font-size: 5rem;
-                line-height: .9;
-            }
-            .p1{
-                margin: 2rem 0;
-                font-size: 1.8rem;
-            }
-            a{
-                color: $clr-primary;
-
-            }
-            a:hover{
-                text-decoration: underline;
-            }
-            .p2{
-                background-color: #25252b;
-                padding: 1rem 4rem;
-                border-radius: 1rem ;
-                display: inline-block;
-                margin: 2rem 0;
-                position: relative;
-            }
-            .p2::after{
-                content: "";
-                width: 1.6rem;
-                height: 1.6rem;
-                display: block;
-                transform: rotate(45deg);
-                background: #25252b;
-                position: absolute;
-                top: -.7rem;
-                right: 2.5rem;
-            }
-            .p3{
-                margin-bottom:2rem ;
-            }
-        }
-        .btn{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 2rem;
-
-            button{
-                color: $clr-light;
-                background-color: $clr-primary;
-                outline: none;
-                border: none;
-                font-size: 2rem;
-                padding: 1rem 2rem;
-                font-weight: 600;
-                cursor: pointer;
-                span{
-                    font-size: 1.5rem;
-                    font-weight: 200;
-                }
-
-
-            }
-            .btn1{
-                width: 30rem;
-            }
-            .btn2{
-                margin-left: .3rem;
-                // padding: 1.89rem 1rem;
-                height: 6.7rem;
-            }
-        }
-        img{
-            width: 100%;
-        }
-    }
-    @include mediaQuery($break-lg){
-       &__wrapper{
-        display: flex;
-        justify-content: space-between;
-        .banner__content{
-            margin-top: 5rem;
-        }
-        img{
-            width: 60%;
-        }
-       }
-    }
-}
