@@ -358,13 +358,11 @@ body {
   background-color: #F5F5F5;
   position: relative;
 }
-.slider__group {
-  display: block;
-}
 .slider__item {
   display: flex;
   justify-content: center;
   margin: 0.5rem 0;
+  padding-left: 3rem;
 }
 .slider__item img {
   width: 7.5rem;
@@ -378,9 +376,10 @@ body {
 }
 .slider__item .item__content__header {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   margin-top: 1.5rem;
+  position: relative;
 }
 .slider__item .item__content__header a {
   color: #2c2c32;
@@ -388,12 +387,15 @@ body {
 }
 .slider__item .item__content__header small {
   display: none;
+  margin-left: 1rem;
 }
 .slider__item .item__content__header a:hover {
   color: #0066b8;
 }
 .slider__item .item__content__header i {
   color: #DEDEDF;
+  position: absolute;
+  right: 3rem;
 }
 .slider__item .item__content h6 {
   margin: 0.5rem 0;
@@ -425,8 +427,9 @@ body {
   border: none;
 }
 @media screen and (min-width: 970px) {
-  .slider__group .tns-item .tns-slide-active {
+  .slider__group {
     display: flex;
+    flex-direction: row;
   }
   .slider__item img {
     margin: 0 0.5rem;
@@ -442,6 +445,269 @@ body {
   .slider__item p {
     max-width: 30rem;
   }
+}
+
+.purpose img {
+  display: block;
+  margin: auto;
+  width: 55%;
+}
+.purpose__item {
+  padding: 5rem 0;
+}
+.purpose__item__text {
+  margin: 0 2rem;
+}
+.purpose__item__text h4 {
+  font-weight: normal;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.7;
+}
+.purpose__item__text p {
+  text-align: justify;
+  line-height: 3.5rem;
+}
+.purpose__item__text a {
+  color: #0066b8;
+}
+.purpose__item__text a:hover {
+  text-decoration: underline;
+}
+.purpose #debug {
+  background-color: #F5F5F5;
+}
+.purpose #extensible {
+  background-color: #F5F5F5;
+}
+.purpose #extensible img {
+  transition: 300ms ease-in-out;
+}
+.purpose #extensible img:hover {
+  transform: scale(1.1);
+}
+@media screen and (min-width: 970px) {
+  .purpose .purpose__item {
+    padding: 3rem 0;
+  }
+  .purpose .purpose__item__wrapper {
+    display: flex;
+    gap: 10rem;
+  }
+  .purpose .purpose__item__wrapper img {
+    margin-top: 3rem;
+    width: 45%;
+  }
+  .purpose .purpose__item__text {
+    margin-top: 3rem;
+  }
+  .purpose .purpose__item__text h4 {
+    margin-top: unset;
+    font-size: 3rem;
+  }
+  .purpose .purpose__item__text p {
+    font-size: 1.8rem;
+    text-align: unset;
+  }
+  .purpose #extensible .purpose__item {
+    padding: 3rem 0;
+  }
+  .purpose #extensible .purpose__item__wrapper {
+    flex-direction: row-reverse;
+  }
+  .purpose #extensible .purpose__item__wrapper img {
+    width: 30%;
+    margin-top: unset;
+  }
+}
+
+#debug .purpose__item__wrapper {
+  flex-direction: row-reverse;
+}
+
+.language {
+  background-color: #F5F5F5;
+}
+.language__wrapper {
+  display: block;
+  text-align: center;
+}
+.language__wrapper h2 {
+  font-weight: normal;
+  margin: 4.5rem 0;
+  font-size: 2rem;
+}
+.language__wrapper a {
+  color: #0066b8;
+}
+.language__wrapper a:hover {
+  text-decoration: underline;
+}
+.language__wrapper button {
+  color: #ffffff;
+  background-color: #0066b8;
+  outline: none;
+  border: none;
+  font-size: 2rem;
+  padding: 1.5rem 2.5rem;
+  font-weight: 600;
+  transition: 50ms;
+  cursor: pointer;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+.language__wrapper button:hover {
+  background-color: #005194;
+}
+.language__item {
+  margin-bottom: 2rem;
+}
+.language__item ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+.language__item ul li {
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 970px) {
+  .language__wrapper h2 {
+    font-size: 3rem;
+    opacity: 0.7;
+  }
+  .language__wrapper button {
+    margin: 5rem;
+  }
+  .language__item {
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  .language__item ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 2rem;
+  }
+}
+
+.download__wrapper {
+  display: block;
+  text-align: center;
+  margin: 4rem 0;
+}
+.download__wrapper img {
+  margin-bottom: 1rem;
+}
+.download__wrapper button {
+  color: #ffffff;
+  background-color: #0066b8;
+  outline: none;
+  border: none;
+  font-size: 1.7rem;
+  width: 21rem;
+  height: 5.5rem;
+  font-weight: 300;
+  transition: 50ms;
+  cursor: pointer;
+}
+.download__wrapper button span {
+  font-weight: normal;
+  font-size: 1rem;
+}
+.download__wrapper button:hover {
+  background-color: #005194;
+}
+.download__wrapper table {
+  margin: 0 auto;
+}
+.download__wrapper table th {
+  font-size: 1.5rem;
+}
+.download__wrapper table a {
+  font-size: 1.3rem;
+  background-color: #0066b8;
+  color: #ffffff;
+  border-radius: 2px;
+  padding: 1px;
+}
+.download__wrapper table:last-child {
+  padding-top: 2rem;
+}
+.download__item img {
+  width: 20%;
+}
+.download__item2 img {
+  width: 20%;
+}
+.download__item2 button {
+  width: 13rem;
+}
+@media screen and (min-width: 970px) {
+  .download__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+    margin: 4rem 10rem;
+  }
+  .download__wrapper button {
+    height: 6rem;
+  }
+  .download__item img {
+    width: 10rem;
+    height: 10rem;
+  }
+  .download__item2 img {
+    width: 8rem;
+    height: 10rem;
+  }
+  .download__item2 button {
+    width: 13rem;
+  }
+  .download__item3 img {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+
+.terms__privacy {
+  background-color: #F5F5F5;
+}
+.terms__privacy__wrapper {
+  text-align: center;
+  display: block;
+  justify-content: center;
+}
+.terms__privacy__wrapper a {
+  color: #0066b8;
+}
+.terms__privacy__wrapper a:hover {
+  text-decoration: underline;
+}
+.terms__privacy__wrapper__item {
+  display: block;
+}
+.terms__privacy__wrapper__item .item {
+  margin: 5rem 0;
+}
+.terms__privacy__wrapper__item .item h4 {
+  font-size: 1.8rem;
+}
+.terms__privacy__wrapper__item .item p {
+  line-height: 2;
+}
+.terms__privacy__wrapper .license {
+  max-width: 27rem;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+.terms__privacy__wrapper .license h5 {
+  line-height: 2.5;
+}
+.terms__privacy__wrapper .license p {
+  font-size: 1.2rem;
+  line-height: 2.5;
 }
 
 .header {

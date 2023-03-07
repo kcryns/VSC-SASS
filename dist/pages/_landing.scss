@@ -203,13 +203,11 @@
 
     background-color: #F5F5F5;
     position: relative;
-    &__group{
-        display: block;
-    }
     &__item{
         display: flex;
         justify-content: center;
         margin: .5rem 0;
+        padding-left: 3rem;
         img{
             width: 7.5rem;
             height: 7.5rem;
@@ -221,9 +219,10 @@
             margin-left: .5rem;
             &__header{
                 display: flex;
-                justify-content: space-between;
+                justify-content: start;
                 align-items: center;
                 margin-top: 1.5rem;
+                position: relative;
                 a{
                     color: $clr-dark;
                     font-weight: 600;
@@ -231,12 +230,15 @@
                 }
                 small{
                     display: none;
+                    margin-left: 1rem;
                 }
                 a:hover{
                     color: $clr-primary;
                 }
                 i{
                     color: #DEDEDF;
+                    position: absolute;
+                    right: 3rem;
                 }
             }
             h6{
@@ -252,6 +254,9 @@
             }
         }
     }
+    // .tns-item {
+    // display: -webkit-inline-box;
+    // }
     .tns-outer{
         position: relative;
     }
@@ -274,31 +279,10 @@
     }
 
 
-// .tns-inner{
-//     height: 60rem;
-// }
-// .tns-controls{
-//     display: flex;
-//     gap: 1rem;
-//     @include mediaQuery($break-sm){
-//         justify-content: center;
-//     }
-//     button{
-//         position: absolute;
-//         width: 4rem;
-//         height: 4rem;
-//         border: none;
-//         // @include centerAll;
-//         color: $clr-dark;
-//         font-size: 3rem;
-
-
-//     }
-// }
-
 @include mediaQuery($break-lg){
-    &__group .tns-item .tns-slide-active{
+    &__group{
         display: flex;   
+        flex-direction: row;
      }
     &__item{
         img{
@@ -318,6 +302,297 @@
             }
             p{
                 max-width: 30rem;
+            }
+        }
+    }
+}
+
+// PURPOSE
+
+.purpose{
+    img{
+        display: block;
+        margin: auto;
+        width: 55%;
+    }
+    &__item{
+        padding: 5rem 0;
+        &__text{
+            margin: 0 2rem;
+            h4{
+                font-weight: normal;
+                font-size: 2rem;
+                margin-top: 2rem;
+                margin-bottom: 2.5rem;
+                opacity: .7;
+                
+            }
+            p{
+                text-align: justify;
+                line-height: 3.5rem;
+            }
+            a{
+                color: $clr-primary;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    #debug{
+        background-color: #F5F5F5;
+    }
+    #extensible{
+        background-color: #F5F5F5;
+        img{
+            transition: 300ms ease-in-out;
+        }
+        img:hover{
+            transform: scale(1.1);
+        }
+    }
+    @include mediaQuery($break-lg){
+
+        .purpose{
+            &__item{
+                padding: 3rem 0;
+                &__wrapper{
+                    display: flex;
+                    gap: 10rem;
+                    img{
+                        margin-top: 3rem;
+                        width: 45%;
+                    }
+
+                }
+                &__text{
+                    margin-top: 3rem;
+                    h4{
+                        margin-top: unset;
+                        font-size: 3rem;
+                    }
+                    p{
+                        font-size: 1.8rem;
+                        text-align: unset;
+                    }
+                }
+                
+            }
+
+        }
+        #extensible{
+            .purpose__item{
+                padding: 3rem 0;
+                &__wrapper{
+                    flex-direction: row-reverse;
+                    img{
+                        width: 30%;
+                        margin-top: unset;
+                    }
+                }
+            }
+        }
+    }
+
+}
+#debug{
+    .purpose__item__wrapper{
+        flex-direction: row-reverse;
+    }
+}
+
+// LANGUAGE
+
+.language{
+    background-color: #F5F5F5;
+    &__wrapper{
+        display: block;
+        text-align: center;
+        h2{
+            font-weight: normal;
+            margin: 4.5rem 0;
+            font-size: 2rem;
+        }
+        a{
+            color: $clr-primary;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        button{
+            color: $clr-light;
+            background-color: $clr-primary;
+            outline: none;
+            border: none;
+            font-size: 2rem;
+            padding: 1.5rem 2.5rem;
+            font-weight: 600;
+            transition: 50ms;
+            cursor: pointer;
+            margin-top: 3rem;
+            margin-bottom: 5rem;
+        }
+        button:hover{
+            background-color: #005194;
+        }
+    }
+    &__item{
+        margin-bottom: 2rem;
+        ul{
+            @include grid(2, 2rem) ; 
+            li{
+                display: flex;
+                align-items:center ;
+            }
+        }     
+    }
+    @include mediaQuery($break-lg){
+        &__wrapper{
+            h2{
+                font-size: 3rem;
+                opacity: .7;
+            }
+
+            button{
+                margin: 5rem;
+            }
+        }
+        &__item{
+            margin: 0 auto;
+            width: 80%;
+            margin-bottom: 2rem;
+            ul{
+                @include grid(6, 2rem);
+                
+            }
+        }
+    }
+}
+// DOWNLOAD
+.download{
+    &__wrapper{
+        display: block;
+        text-align: center;
+        margin: 4rem 0;
+        img{
+            margin-bottom: 1rem;
+        }
+        button{
+            color: $clr-light;
+            background-color: $clr-primary;
+            outline: none;
+            border: none;
+            font-size: 1.7rem;
+            width: 21rem;
+            height: 5.5rem;
+            font-weight: 300;
+            transition: 50ms;
+            cursor: pointer;
+            span{
+                font-weight: normal;
+                font-size: 1rem;
+            }
+        }
+        button:hover{
+            background-color: #005194;
+        }
+        table{
+            margin: 0 auto;
+            th{
+                font-size: 1.5rem;
+            }
+            a{
+                font-size: 1.3rem;
+                background-color: $clr-primary;
+                color: $clr-light;
+                border-radius: 2px;
+                padding: 1px;
+            }
+            &:last-child{
+                padding-top: 2rem;
+            }
+
+        }
+    }
+    &__item{
+        img{
+            width: 20%;
+        }
+    }
+    &__item2{
+        img{
+            width: 20%;
+        }
+        button{
+            width: 13rem;
+        }
+    }
+    @include mediaQuery($break-lg){
+        &__wrapper{
+            @include grid(3,0);
+            margin: 4rem 10rem;
+            button{
+                height: 6rem;
+            }
+        }
+        &__item{
+            img{
+                width: 10rem;
+                height: 10rem;
+            }
+        }
+        &__item2{
+            img{
+                width: 8rem;
+                height: 10rem;
+            }
+            button{
+                width: 13rem;
+            }
+         }
+         &__item3{
+            img{
+                width: 10rem;
+                height: 10rem;
+            }
+        }
+}
+}
+// TERMS AND PRIVACY
+.terms__privacy{
+    background-color: #F5F5F5;
+    &__wrapper{
+        text-align: center;
+        display: block;
+        justify-content: center;
+        a{
+            color: $clr-primary;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        &__item{
+            display: block;
+            .item{
+                margin: 5rem 0;
+                h4{
+                    font-size: 1.8rem;
+                }
+                p{
+                    line-height: 2;
+                }
+            }
+        }
+        .license{
+            max-width: 27rem;
+            margin: 0 auto;
+            margin-bottom: 3rem;
+            h5{
+                line-height: 2.5;
+            }
+            p{
+                font-size: 1.2rem;
+                line-height: 2.5;
             }
         }
     }
