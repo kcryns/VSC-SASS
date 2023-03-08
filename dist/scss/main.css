@@ -163,6 +163,7 @@ body {
 .version {
   background-color: #25252b;
   color: #ffffff;
+  padding-top: 55px;
 }
 .version p {
   padding: 1rem 4rem;
@@ -598,7 +599,7 @@ body {
   margin: 4rem 0;
 }
 .download__wrapper img {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 .download__wrapper button {
   color: #ffffff;
@@ -632,17 +633,26 @@ body {
   border-radius: 2px;
   padding: 1px;
 }
+.download__wrapper table a:hover {
+  background-color: #005194;
+}
 .download__wrapper table:last-child {
   padding-top: 2rem;
 }
 .download__item img {
-  width: 20%;
+  width: 10rem;
+  height: 10rem;
 }
 .download__item2 img {
-  width: 20%;
+  width: 10rem;
+  height: 12rem;
 }
 .download__item2 button {
   width: 13rem;
+}
+.download__item3 img {
+  width: 10rem;
+  height: 10rem;
 }
 @media screen and (min-width: 970px) {
   .download__wrapper {
@@ -687,9 +697,11 @@ body {
 }
 .terms__privacy__wrapper__item {
   display: block;
+  margin-top: 4rem;
 }
 .terms__privacy__wrapper__item .item {
-  margin: 5rem 0;
+  opacity: 0.9;
+  margin-bottom: 10rem;
 }
 .terms__privacy__wrapper__item .item h4 {
   font-size: 1.8rem;
@@ -698,20 +710,49 @@ body {
   line-height: 2;
 }
 .terms__privacy__wrapper .license {
-  max-width: 27rem;
+  max-width: 28rem;
   margin: 0 auto;
   margin-bottom: 3rem;
+  opacity: 0.8;
 }
 .terms__privacy__wrapper .license h5 {
   line-height: 2.5;
 }
 .terms__privacy__wrapper .license p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 2.5;
+}
+@media screen and (min-width: 970px) {
+  .terms__privacy__wrapper__item {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10rem;
+    margin-top: 3rem;
+  }
+  .terms__privacy__wrapper__item .item {
+    margin-bottom: 5rem;
+  }
+  .terms__privacy__wrapper__item .item h4 {
+    font-size: 2.5rem;
+  }
+  .terms__privacy__wrapper__item .item p {
+    font-size: 2rem;
+  }
+  .terms__privacy .license {
+    max-width: 75rem;
+  }
+  .terms__privacy .license h5 {
+    font-size: 1.7rem;
+  }
+  .terms__privacy .license p {
+    font-size: 1.5rem;
+  }
 }
 
 .header {
   position: relative;
+  position: fixed;
+  z-index: 99;
   width: 100%;
 }
 .header .branding {
@@ -857,5 +898,95 @@ body {
   }
   .header .toggle__menu {
     display: none;
+  }
+}
+
+.footer {
+  background-color: #333333;
+}
+.footer__wrapper .follow {
+  display: flex;
+  align-items: center;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+}
+.footer__wrapper .follow small {
+  color: #ffffff;
+  display: none;
+  font-size: 1.4rem;
+  margin-right: 3rem;
+}
+.footer__wrapper .follow a {
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+.footer__wrapper .follow a:hover {
+  color: #b4a0ff;
+}
+.footer__wrapper .follow .github {
+  margin-left: 3rem;
+}
+.footer__wrapper .follow .github a {
+  background-color: #ffffff;
+  color: #2c2c32;
+  padding: 2px 3px;
+  border-radius: 2px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-right: 2px;
+}
+.footer__wrapper .follow .github .bgc:hover {
+  background-color: #ddd;
+}
+.footer__wrapper .follow .github .arrow {
+  position: relative;
+}
+.footer__wrapper .follow .github .arrow:hover {
+  color: #0066b8;
+}
+.footer__wrapper .follow .github .arrow::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  transform: rotate(45deg);
+  position: absolute;
+  left: -0.3rem;
+  top: 0.6rem;
+}
+.footer__wrapper .footer__support {
+  display: flex;
+}
+.footer__wrapper .footer__support__nav a {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-right: 2.5rem;
+}
+.footer__wrapper .footer__support__nav a:hover {
+  color: #b4a0ff;
+}
+.footer__wrapper .footer__support__nav ul {
+  display: flex;
+}
+.footer__wrapper .footer__support__cr {
+  display: block;
+}
+.footer__wrapper .footer__support__cr img {
+  width: 10.5rem;
+  height: 2rem;
+}
+.footer__wrapper .footer__support__cr a {
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+@media screen and (min-width: 970px) {
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+  .footer__wrapper .follow small {
+    display: unset;
   }
 }/*# sourceMappingURL=main.css.map */
