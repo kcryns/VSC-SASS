@@ -281,10 +281,10 @@
 
 
 @include mediaQuery($break-lg){
-    &__group{
-        display: flex;   
-        flex-direction: row;
-     }
+
+    .tns-horizontal.tns-subpixel>.tns-item{
+        display: inline-flex;
+    }
     &__item{
         img{
             margin: 0 .5rem;
